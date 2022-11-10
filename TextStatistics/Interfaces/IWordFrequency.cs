@@ -14,7 +14,7 @@
         /**
          * Adds 1 to frequency of this word
          */
-        void Count();
+        void Count(long n = 1);
 
         /**
         * The frequency.

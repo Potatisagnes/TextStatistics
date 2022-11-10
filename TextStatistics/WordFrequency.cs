@@ -13,9 +13,9 @@ namespace TextStatisticsProject
             _frequency = 1;
         }
 
-        public void Count()
+        public void Count(long n = 1)
         {
-            _frequency++;
+            _frequency += n;
         }
 
         public string Word()

@@ -52,9 +52,17 @@ namespace TextStatisticsProject
             foreach (TextStatistics book in allBooks)
             {
                 _nbrOfLines += book._nbrOfLines;
-                _wordFrequencies.AddRange(book._wordFrequencies);
+                // Check if a word already exists in _wordFrequencies to prevent duplicates 
+                foreach (IWordFrequency wordFrequency in book._wordFrequencies)
+                {
+                    IWordFrequency? found = _wordFrequencies.Find(w => w.Word() == wordFrequency.Word());
+                    if (found == null) { _wordFrequencies.Add(wordFrequency); }
+                    else
+                    {
+                        found.Count(wordFrequency.Frequency());
+                    }
+                }
             }
-
         }
 
         public string BookName()
