@@ -1,0 +1,3 @@
+﻿Dracula	https://www.gutenberg.org/files/45839/45839.txt
+Romeo and Juliet	https://www.gutenberg.org/files/1513/1513-0.txt
+The Inferno	https://www.gutenberg.org/files/41537/41537-0.txt
