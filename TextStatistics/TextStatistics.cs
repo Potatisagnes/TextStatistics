@@ -15,12 +15,12 @@ namespace TextStatisticsProject
             _nbrOfLines = content.Split('\n').Length;
             _wordFrequencies = new List<IWordFrequency>();
 
-            string[] toRemove = { "'s", "'", "\r", ".", ",", ":", ";", "!", "(", ")", "?", "[", "]", "{", "}"};
+            string[] toRemove = { "'s", "'"};
             foreach (string s in toRemove)
             {
                 content = content.Replace(s, "");
             }
-            char[] toReplace = { '-', '"', '_', '/', '&', '@', '£', '#', '='};
+            char[] toReplace = { '\r', '.', ',', ':', ';', '!', '?', '-', '"', '_', '/', '&', '@', '£', '#', '=', '(', ')', '[', ']', '{', '}', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
             foreach(char c in toReplace)
             {
                 content = content.Replace(c, ' ');
